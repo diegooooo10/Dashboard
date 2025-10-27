@@ -1,0 +1,26 @@
+import type { Category } from "../types";
+
+export const categories: Category[] = [
+  "Electronics & Technology",
+  "Fashion & Accessories",
+  "Home & Kitchen",
+  "Beauty & Personal Care",
+  "Sports & Outdoors",
+  "Toys & Kids",
+  "Health & Wellness",
+  "Pets",
+  "Books & Media",
+  "Automotive & Tools",
+  "Groceries & Food",
+  "Office & School Supplies",
+  "Jewelry & Watches",
+  "Gaming & Consoles",
+  "Music & Instruments",
+  "Art & Craft Supplies",
+  "Baby Products",
+  "Travel & Luggage",
+  "Smart Home & Appliances",
+  "Footwear",
+  "Outdoor & Garden",
+  "Collectibles & Hobbies",
+];

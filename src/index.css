@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-bg: #f2f2f2;
+  --color-bg-card: #ffffff;
+  --color-bg-sidebar: #f3f4f6;
+  --color-text: #111827;
+  --color-text-secondary: #4b5563;
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-secondary: #047857;
+  --color-secondary-hover: #065f46;
+  --color-success: #16a34a;
+  --color-error: #dc2626;
+  --color-warning: #f59e0b;
+  --color-border: #e5e7eb;
+  --color-divider: #d1d5db;
+
+  --color-bg-dark: #0f172a;
+  --color-bg-card-dark: #1e293b;
+  --color-bg-sidebar-dark: #1e293b;
+  --color-text-dark: #f9fafb;
+  --color-text-secondary-dark: #d1d5db;
+  --color-primary-dark: #2563eb;
+  --color-primary-hover-dark: #1d4ed8;
+  --color-secondary-dark: #10b981;
+  --color-secondary-hover-dark: #059669;
+  --color-success-dark: #22c55e;
+  --color-error-dark: #ef4444;
+  --color-warning-dark: #facc15;
+  --color-border-dark: #334155;
+  --color-divider-dark: #475569;
+}
+@utility card {
+  @apply bg-bg-card rounded-md border-border border text-text dark:text-text-dark dark:bg-bg-card-dark dark:border-border-dark transition-theme overflow-hidden;
+}
+
+@utility button {
+  @apply bg-primary dark:bg-primary-dark hover:bg-primary-hover dark:hover:bg-primary-hover-dark text-text-dark font-semibold py-2 px-4 rounded-md w-full cursor-pointer text-sm sm:text-xs transition-theme disabled-button;
+}
+@utility disabled-button {
+  @apply disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:text-gray-700 dark:disabled:text-gray-300 disabled:cursor-not-allowed;
+}
+@utility transition-size {
+  @apply duration-300 ease-linear transition-all;
+}
+@utility transition-theme {
+  @apply duration-300 ease-linear transition-colors;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes leave {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.animate-enter {
+  animation: enter 200ms ease-in-out forwards;
+}
+.animate-leave {
+  animation: leave 200ms ease-in-out forwards;
+}
