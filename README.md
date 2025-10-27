@@ -54,7 +54,7 @@ Permite gestionar productos, usuarios y ver estadísticas según el rol (User, M
 ### 1. Clona el repositorio
 
 ```bash
-git clone (URL próximamente)
+git clone https://github.com/diegooooo10/Dashboard.git
 cd nombre-del-repo
 ```
 
@@ -85,4 +85,4 @@ El proyecto estará disponible en:
 
 ## 🌐 Deploy
 El proyecto está alojado en una página web:
-🔗 (URL próximamente)
+🔗 https://react-e-commerce-dashboard.netlify.app/
